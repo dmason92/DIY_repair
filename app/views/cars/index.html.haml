@@ -1,0 +1,22 @@
+-#This file is app/views/cars/index.html.haml
+%hl All Cars
+
+%table#cars
+  %thead
+    %tr
+      %th Make
+      %th Model
+      %th Year
+      %th Type
+      %th Average Price
+      %th Comments
+
+  %tbody
+    - @cars.each do |car|
+      %tr
+        %td = car.make
+        %td = car.model
+        %td = car.year
+        %td = car.type
+        %td = car.average_price
+        %td = car.comments
